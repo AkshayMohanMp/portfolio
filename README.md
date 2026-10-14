@@ -87,12 +87,53 @@ Visit `http://localhost:4173` to test the production bundle.
 
 ---
 
-## 🚢 Deployment Options
+## 🚢 Automated CI/CD Deployment Guide
 
-- **Vercel / Netlify**: Simply connect your GitHub repository; build command is `npm run build` and publish directory is `dist`.
-- **GitHub Pages**: Push the `dist` folder or use the GitHub Actions static pages workflow.
-- **AWS S3 + CloudFront**: Sync `dist/` to an S3 bucket configured for static website hosting behind CloudFront.
-- **Docker / Nginx**: Serve the `dist/` directory using an alpine Nginx container.
+Your project is configured with `vercel.json`, `public/_redirects`, and `.github/workflows/deploy.yml` for zero-configuration, automated deployments.
+
+### Step 1: Push your project to GitHub
+
+Run these commands in your project root:
+```bash
+git remote add origin https://github.com/AkshayMohanMp/portfolio.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
+### Step 2A: Set Up Vercel CI/CD (Push to Deploy)
+
+1. Go to [vercel.com](https://vercel.com/) and sign in with GitHub.
+2. Click **Add New...** → **Project**.
+3. Select your `portfolio` repository from the list.
+4. Vercel automatically detects Vite:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+5. Click **Deploy**.
+
+> **CI/CD Behavior**: Every time you run `git push origin main`, Vercel automatically builds and deploys your changes to production within 20 seconds. Any feature branches get instant preview URLs!
+
+---
+
+### Step 2B: Set Up Cloudflare Pages CI/CD (Unlimited Bandwidth)
+
+1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **Workers & Pages**.
+2. Click **Create application** → **Pages** → **Connect to Git**.
+3. Select your `portfolio` repository.
+4. Set build configuration:
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+5. Click **Save and Deploy**.
+
+> **CI/CD Behavior**: Every `git push` to `main` triggers Cloudflare's global edge build and publishes across 300+ edge data centers with unlimited bandwidth. Single-page application routing is automatically handled by `public/_redirects`.
+
+---
+
+### 💡 Pro Tip: Run Both Concurrently
+You can connect the **same** GitHub repository to **both** Vercel and Cloudflare Pages at the same time. Whenever you do `git push origin main`, both platforms will build and update automatically, providing dual redundancy for free!
 
 ---
 
