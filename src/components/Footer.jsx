@@ -23,7 +23,7 @@ export default function Footer({ onOpenTerminal, onOpenResume }) {
                 Akshay Mohan M P
               </div>
               <div className="text-[11px] text-[#7A7165]">
-                Backend Engineer — Go · Cloud Infrastructure · IoT Platforms
+                Backend Engineer (Go) · IoT Platforms · AWS & DevOps
               </div>
             </div>
           </div>

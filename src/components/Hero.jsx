@@ -44,26 +44,26 @@ export default function Hero({ onOpenResume, onOpenTerminal }) {
             {/* Main Headline */}
             <div>
               <h1 className="text-3xl sm:text-5xl lg:text-5.5xl font-extrabold tracking-tight text-[#24211D] leading-[1.15]">
-                Engineering <span className="font-serif italic font-normal text-[#C25E38]">High-Throughput Go</span> Backends & Industrial IoT Platforms.
+                Engineering <span className="font-serif italic font-normal text-[#C25E38]">High-Throughput Go</span> Backends, IoT Platforms & Cloud Infrastructure.
               </h1>
               <p className="mt-4 text-base sm:text-lg text-[#5E564E] leading-relaxed font-normal">
-                I'm <strong className="text-[#24211D] font-semibold">{personalInfo.name}</strong>, a Backend Engineer with 2+ years building and operating production IoT platforms in Go and Python. Led live migrations from Express.js to Go, tuned kernel and database pools to achieve a <strong className="text-[#C25E38] font-semibold">+96.1% sustained capacity boost</strong> under heavy concurrency, and manage end-to-end cloud infrastructure on AWS.
+                I'm <strong className="text-[#24211D] font-semibold">{personalInfo.name}</strong>, a Backend Engineer building production systems in <strong className="text-[#24211D] font-semibold">Go</strong> for industrial IoT and laboratory platforms, and running the cloud infrastructure they live on. Led a complete Express.js-to-Go migration of a multi-tenant platform, tuned kernel and database pools to achieve a <strong className="text-[#C25E38] font-semibold">+96.1% sustained capacity boost</strong> under heavy concurrency, and engineer across edge devices (Raspberry Pi 5), device security (PKI / mTLS / MQTT), and autonomous CV pipelines.
               </p>
             </div>
 
             {/* Core Competencies Badges */}
             <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs">
               <span className="px-3 py-1 rounded-md bg-[#F4EDE2] border border-[#E3D8C8] text-[#5A5045] flex items-center gap-1.5 shadow-2xs">
-                <Server className="w-3.5 h-3.5 text-[#C25E38]" /> Go / net/http / pgx
+                <Server className="w-3.5 h-3.5 text-[#C25E38]" /> Go / Gin / pgx
               </span>
               <span className="px-3 py-1 rounded-md bg-[#F4EDE2] border border-[#E3D8C8] text-[#5A5045] flex items-center gap-1.5 shadow-2xs">
-                <Cpu className="w-3.5 h-3.5 text-[#2D6A4F]" /> IoT Core & Telemetry
+                <Cpu className="w-3.5 h-3.5 text-[#2D6A4F]" /> PKI, mTLS & MQTT
               </span>
               <span className="px-3 py-1 rounded-md bg-[#F4EDE2] border border-[#E3D8C8] text-[#5A5045] flex items-center gap-1.5 shadow-2xs">
-                <Zap className="w-3.5 h-3.5 text-[#B45309]" /> AWS & Terraform
+                <Zap className="w-3.5 h-3.5 text-[#B45309]" /> AWS & OpenTofu
               </span>
               <span className="px-3 py-1 rounded-md bg-[#F4EDE2] border border-[#E3D8C8] text-[#5A5045] flex items-center gap-1.5 shadow-2xs">
-                <Activity className="w-3.5 h-3.5 text-[#7C3AED]" /> Concurrency & Tuning
+                <Activity className="w-3.5 h-3.5 text-[#7C3AED]" /> OpenFGA & OTel
               </span>
             </div>
 
@@ -187,12 +187,12 @@ export default function Hero({ onOpenResume, onOpenTerminal }) {
                     <span className="text-[#2D6A4F] font-semibold">somaxconn 4096</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF7F2] border border-[#EDE5DA]">
-                    <span className="text-[#877E73] block text-[10px]">THROUGHPUT PEAK</span>
-                    <span className="text-[#C25E38] font-semibold">+96.1% sustained</span>
+                    <span className="text-[#877E73] block text-[10px]">AUTH & SECURITY</span>
+                    <span className="text-[#C25E38] font-semibold">OpenFGA + mTLS</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF7F2] border border-[#EDE5DA]">
-                    <span className="text-[#877E73] block text-[10px]">AUTH & TRACING</span>
-                    <span className="text-[#5B4F7B] font-semibold">Zitadel + ClickHouse</span>
+                    <span className="text-[#877E73] block text-[10px]">OBSERVABILITY</span>
+                    <span className="text-[#5B4F7B] font-semibold">OTel + HyperDX</span>
                   </div>
                 </div>
 

@@ -50,8 +50,8 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h1 className="text-2xl font-bold tracking-tight text-slate-950">
               Akshay Mohan M P
             </h1>
-            <p className="text-sm font-semibold text-cyan-800 mt-0.5">
-              Backend Engineer — Go · Cloud Infrastructure · IoT Platforms
+            <p className="text-sm font-semibold text-[#8C3A18] mt-0.5">
+              Backend Engineer (Go) · IoT Platforms · AWS & DevOps
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 mt-2 font-mono">
               <span>{personalInfo.location}</span>
@@ -86,18 +86,63 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* Skills */}
           <div className="mb-4">
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1.5 font-mono">
-              SKILLS
+              SKILLS AT A GLANCE
             </h2>
-            <div className="space-y-1 text-xs text-slate-800">
-              <div><strong className="text-slate-950">Languages:</strong> Go, Python, JavaScript, TypeScript, SQL</div>
-              <div><strong className="text-slate-950">Backend:</strong> Go (net/http, goroutines, context, pgx), Python (Django), Express.js, Node.js, REST API design, OpenAPI/Swagger, microservices, MQTT, PostgreSQL, PGMQ, Firebase</div>
-              <div><strong className="text-slate-950">Frontend:</strong> React</div>
-              <div><strong className="text-slate-950">AWS:</strong> EC2, Lambda, RDS, VPC, IAM, Cognito, IoT Core, S3, SQS, SES, LightSail, Amplify, Security Groups</div>
-              <div><strong className="text-slate-950">Infra & DevOps:</strong> Docker, Portainer, Coolify, Zot registry, MinIO, Terraform, OpenTofu, Git, GitHub Actions CI/CD, Nginx, Certbot, Linux server administration & kernel tuning, host firewalls</div>
-              <div><strong className="text-slate-950">AI & Computer Vision:</strong> SAM 2.1, YOLO (custom-trained), CVAT, agentic AI coding tools</div>
-              <div><strong className="text-slate-950">Identity & Security:</strong> Zitadel, AWS Cognito, IAM policy design, RBAC, device PKI / certificate auth, signed OTA releases</div>
-              <div><strong className="text-slate-950">Testing & Observability:</strong> Table-driven testing in Go, API contract tests, load & concurrency benchmarking, OpenTelemetry, ClickHouse, Uptime Kuma, structured JSON logging</div>
-              <div><strong className="text-slate-950">Spoken Languages:</strong> English (professional), Malayalam (native), Hindi (professional)</div>
+            <div className="overflow-x-auto mb-2">
+              <table className="w-full text-left text-xs border border-slate-200">
+                <thead className="bg-slate-100 font-mono text-slate-800 border-b border-slate-200">
+                  <tr>
+                    <th className="p-1.5 font-bold w-1/4">Area</th>
+                    <th className="p-1.5 font-bold w-1/2">What I use</th>
+                    <th className="p-1.5 font-bold w-1/4">Where I used it</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 text-slate-800">
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Backend (Go)</td>
+                    <td className="p-1.5">Gin, pgx, REST/OpenAPI, JWT, RBAC, OpenFGA, Protobuf</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Samyojak, Vepl Cloud, alert pipeline, device cert service</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Data & messaging</td>
+                    <td className="p-1.5">PostgreSQL, PGMQ, SQLite, MQTT (VerneMQ, EMQX, embedded broker), FCM, AWS SQS, S3 / MinIO</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Alerts, telemetry, edge devices</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Cloud & infrastructure</td>
+                    <td className="p-1.5">AWS (EC2, Lightsail, S3, SES, Secrets Manager, IAM Identity Center, Amplify, CloudFront), Terraform / OpenTofu, Docker, Coolify, Nomad</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">All platforms</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Security & PKI</td>
+                    <td className="p-1.5">X.509 PKI, mutual TLS, certificate revocation (CRL), signed updates, secrets management</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Device fleet, container registry, OTA updates</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Observability & testing</td>
+                    <td className="p-1.5">OpenTelemetry (traces, metrics, logs), HyperDX, Go testing (testify, pgxmock), Artillery load testing</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Every Go service</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Edge & embedded</td>
+                    <td className="p-1.5">Raspberry Pi 5, Modbus TCP, OpenCV (GoCV), systemd, Server-Sent Events</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Vision test bench (VMBD)</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">Python & TypeScript</td>
+                    <td className="p-1.5">CVAT extensions, ClearML, PyTorch detectors (D-FINE, Mask R-CNN), React / Redux Toolkit</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Computer-vision pipeline (SahasForge)</td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-semibold font-mono">CI/CD</td>
+                    <td className="p-1.5">GitHub Actions (hosted and self-hosted runners), Gitea Actions, ARM64 builds</td>
+                    <td className="p-1.5 text-cyan-900 font-mono text-[11px]">Test, ARM64 build and deploy pipelines</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="text-[11px] text-slate-700">
+              <strong>Spoken Languages:</strong> English (professional), Malayalam (native), Hindi (professional)
             </div>
           </div>
 
@@ -116,18 +161,16 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <div className="text-xs font-mono text-slate-600">Aug 2024 – Present</div>
               </div>
               <div className="text-xs text-slate-500 italic mb-1.5">
-                Kolhapur, Maharashtra · IoT platform for industrial machinery
+                Kolhapur, Maharashtra · Industrial IoT platforms & cloud infrastructure
               </div>
               <ul className="list-disc list-inside space-y-1 text-slate-800 text-xs">
-                <li>Led migration of the core IoT platform backend from Express.js to Go, taking ownership of API design, data model, and the deployment path that runs it in production.</li>
-                <li>Built further Go microservices around the platform — an AWS SQS-driven alert and push-notification service, the cloud backend for a customer programme, and a data-collection service on object storage — and ported a Python backend to Go.</li>
-                <li>Diagnosed and fixed a hard capacity ceiling under load: the platform collapsed past 225 concurrent connections, throwing 495 socket errors and timing out 99.3% of traffic. Tuning the pgx pool (min 20 / max 150), lowering bcrypt cost to 10, and expanding the kernel socket backlog (somaxconn 4096) produced a 96.1% increase in sustained throughput capacity — zero dropped connections through 225 clients and graceful, linear latency degradation at 250.</li>
-                <li>Benchmarked the Go backend across 11 concurrency tiers from 25 to 250 virtual clients, documenting throughput, p-latency and error profiles into a client-facing capacity report, and specified the horizontal replica path (stateless nodes behind ALB/Nginx) for scaling beyond single-node limits.</li>
-                <li>Own production infrastructure end to end — Linux servers plus AWS (EC2, Lambda, RDS, VPC), provisioned as code with Terraform and OpenTofu; Docker deployments through Portainer and Coolify; GitHub Actions CI/CD; and a self-hosted Zot registry that removed the external registry dependency and its egress cost.</li>
-                <li>Set up observability and hardening across the stack: OpenTelemetry logging and tracing into ClickHouse, uptime monitoring with Uptime Kuma, and automated TLS certificates with Certbot.</li>
-                <li>Designed multi-tenant authentication and role-based access with Zitadel alongside AWS Cognito, giving each customer site scoped visibility and control over only its own machines.</li>
-                <li>Built the device telemetry path over AWS IoT Core and MQTT into PostgreSQL, with per-machine long- and wide-format time-series exports used by customers for offline analysis.</li>
-                <li>Established the team's testing baseline — table-driven go test suites and contract tests over API payloads — and set engineering standards (clean architecture, explicit error handling, structured JSON logging) while mentoring developers through code review.</li>
+                <li>Led migration of the core IoT platform backend (Samyojak) from Express.js to Go, taking complete ownership of API design, OpenFGA relationship-based access model, and production deployment.</li>
+                <li>Diagnosed and fixed a hard capacity ceiling under load: platform collapsed past 225 concurrent connections, throwing 495 socket errors and timing out 99.3% of traffic. Tuning pgx pool (min 20 / max 150), lowering bcrypt cost to 10, and expanding kernel socket backlog (somaxconn 4096) produced a 96.1% increase in sustained throughput capacity — zero dropped connections through 225 clients and graceful linear latency degradation at 250.</li>
+                <li>Built further Go microservices: Vepl Cloud (94 OpenAPI endpoints, Odoo ERP integration, native PDF reports), an event-driven PGMQ alert and push pipeline with Firebase Cloud Messaging, and an internal CA/mTLS device security service.</li>
+                <li>Engineered edge software on Raspberry Pi 5 for VMBD Vision: Modbus TCP closed-loop PLC dosing, real-time OpenCV (GoCV) frame analysis, embedded MQTT, and a cryptographically signed OTA update daemon with automated rollback.</li>
+                <li>Architected SahasForge computer-vision pipeline: CVAT extensions with temporal labeling, Nuclio auto-annotation, and an unattended AWS GPU spot training loop executing 48-epoch runs for ~$0.40.</li>
+                <li>Built the AWS Cloud Dashboard: a single-binary Go tool with zero external dependencies driving OpenTofu for infrastructure provisioning, AWS SSO device login, and Cost Explorer analytics.</li>
+                <li>Established the team's testing baseline: table-driven Go test suites (600+ tests across services), pgxmock database mocking, and OpenTelemetry traces/metrics/logs over OTLP into ClickHouse/HyperDX.</li>
               </ul>
             </div>
 
@@ -153,7 +196,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <div className="text-xs font-mono text-slate-600">May 2019 – Oct 2021</div>
               </div>
               <ul className="list-disc list-inside space-y-1 text-slate-800 text-xs">
-                <li>Maintained and safety-tested diagnostic, patient-monitoring and surgical equipment across state health networks. Moved into software after completing a BTech in Electronics & Communications alongside this role.</li>
+                <li>Maintained and safety-tested diagnostic, patient-monitoring and surgical equipment across state health networks. Developed foundational discipline in mission-critical reliability, electrical signals, safety margins, and hardware protocols before transitioning to software.</li>
               </ul>
             </div>
           </div>
@@ -167,101 +210,107 @@ export default function ResumeModal({ isOpen, onClose }) {
             {/* Samyojak */}
             <div className="mb-2.5">
               <div className="font-bold text-slate-950">
-                Samyojak — Multi-tenant IoT Operations Platform
+                1. Samyojak: Multi-Tenant Industrial IoT Platform
               </div>
               <div className="text-xs text-slate-600 font-mono mb-1">
-                Go (migrated from Express.js) · React · PostgreSQL / pgx · Zitadel · AWS IoT Core / VPC / IAM
+                Go · Gin · PostgreSQL (pgx) · OpenFGA · AWS · OpenTelemetry · Scalar · testify / pgxmock
               </div>
               <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Rebuilt the platform core in Go with tiered, per-site access control, routed over a private AWS VPC so operators see and command only their own machines.</li>
-                <li>Built the React operations dashboard for live machine state and telemetry across CNC and VMC machine fleets, with long/wide CSV export for customer-side analysis.</li>
-                <li>Owned the performance work end to end — load testing, connection-pool and kernel tuning, and the capacity report delivered to the client.</li>
-              </ul>
-            </div>
-
-            {/* VMBD */}
-            <div className="mb-2.5">
-              <div className="font-bold text-slate-950">
-                VMBD — Automated Methylene-Blue Clay Determination Rig
-              </div>
-              <div className="text-xs text-slate-600 font-mono mb-1">
-                Go · PostgreSQL · Raspberry Pi camera · PLC integration · MinIO / S3 · image processing
-              </div>
-              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Built the backend for a machine-vision rig that automates the methylene-blue test for active clay content: the Pi captures each titration iteration, the Go service derives median stain width in pixels, and the PLC doses MB solution until the absorption endpoint is reached.</li>
-                <li>Modelled cycles, iterations and measurements in PostgreSQL with captured and processed frames in MinIO/S3 — 411 measurements across 54 test cycles in a single run, at an 82% first-pass valid rate, every result traceable back to the exact frame that produced it.</li>
-                <li>Exposed cycle and measurement data through Go APIs and CSV export so QA can audit a rejected reading against its captured image without touching the rig.</li>
-              </ul>
-            </div>
-
-            {/* Secure OTA */}
-            <div className="mb-2.5">
-              <div className="font-bold text-slate-950">
-                Secure OTA Update System — Vision-Inspection Machine
-              </div>
-              <div className="text-xs text-slate-600 font-mono mb-1">
-                Go · signed releases · certificate-based device auth · automated rollback
-              </div>
-              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Built an over-the-air update system in Go with signed releases, certificate-based device authentication, and safe rollback.</li>
-                <li>Hardened the deployment so a faulty build is caught and rolled back automatically.</li>
-                <li>Traced a wrong first-cycle measurement to a timing race with the machine's PLC; fixed it and added a regression test.</li>
-              </ul>
-            </div>
-
-            {/* AI-Assisted Annotation */}
-            <div className="mb-2.5">
-              <div className="font-bold text-slate-950">
-                AI-Assisted Annotation — Foundry Vision
-              </div>
-              <div className="text-xs text-slate-600 font-mono mb-1">
-                Python · SAM 2.1 · YOLO · CVAT · Django · React · TypeScript
-              </div>
-              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Integrated the SAM 2.1 segmentation model and a YOLO detector trained on in-house data into a self-hosted CVAT platform to speed up labelling for foundry vision work.</li>
-                <li>Building a video-labelling application with Django, a REST API, React, and TypeScript.</li>
-              </ul>
-            </div>
-
-            {/* Internal Cloud Admin Console */}
-            <div className="mb-2.5">
-              <div className="font-bold text-slate-950">
-                Internal Cloud Admin Console
-              </div>
-              <div className="text-xs text-slate-600 font-mono mb-1">
-                Go · React · AWS SDK (IAM, Cognito, RDS, IoT) · audit logging
-              </div>
-              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Built an in-house admin console replacing manual AWS Console work for provisioning tenants, devices and scoped access — collapsing a multi-step console workflow into a single form and removing the need to issue AWS Console logins to non-infrastructure staff.</li>
-                <li>Backed every action with least-privilege service roles and a full audit trail of who changed what and when.</li>
+                <li>Led backend migration from Express.js to Go end to end: API design, data model, and production deployment.</li>
+                <li>Access control: tenant-scoped JWT cookie sessions, 4-tier role model (super-admin, company, plant, machine) with 40+ permission scopes, and OpenFGA relationship checks resolving each request directly to its entity.</li>
+                <li>Device flows: bulk, de-duplicated and rate-limited measurement ingestion; Fernet-encrypted QR/BLE tokens for device provisioning; S3 for assets; SES for email OTP.</li>
+                <li>Quality: 85 OpenAPI-documented paths with generated Scalar docs and Postman collection generator; ~300 Go tests using testify and pgxmock; gzip and ETag support; tuned pgx connection pool (completely replaced GORM).</li>
+                <li>Operations: OpenTelemetry traces, metrics and logs over OTLP into HyperDX; ARM64 binaries deployed on EC2 under systemd.</li>
               </ul>
             </div>
 
             {/* Vepl Cloud */}
             <div className="mb-2.5">
               <div className="font-bold text-slate-950">
-                Vepl Cloud — Enterprise Resource Platform
+                2. Vepl Cloud: Laboratory & Test-Management Platform
               </div>
               <div className="text-xs text-slate-600 font-mono mb-1">
-                Go · AWS Lambda / RDS / Cognito · Zitadel · Docker · GitHub Actions
+                Go · PostgreSQL · Odoo ERP · Docker · Coolify · REST/OpenAPI · PDF Generation
               </div>
               <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Migrated transactional Node.js services to Go on AWS Lambda, cutting cold-start latency on the serverless execution tier.</li>
-                <li>Containerised the deployment path with Docker, Portainer and Coolify and wired GitHub Actions CI/CD for repeatable releases.</li>
+                <li>Backend for managing labs, specimens, samples, batches, test requests, calibration, inventory, and device telemetry.</li>
+                <li>Enterprise integration: Odoo ERP integration through dedicated Go API routes with a Dockerised Odoo instance and custom addons.</li>
+                <li>Automated reporting: native, mathematically verified PDF calibration reports generated in Go without external rendering dependencies.</li>
+                <li>Fail-safe operations: fail-fast boot sequence (secrets, database, keys), standalone liveness endpoint with zero database dependency, Docker health checks, 94 documented API paths, 300+ Go tests, and tag-based rollbacks via Coolify.</li>
               </ul>
             </div>
 
-            {/* Lamae */}
+            {/* Alert Pipeline */}
             <div className="mb-2.5">
               <div className="font-bold text-slate-950">
-                Lamae — Hybrid Microservices Platform
+                3. Alert & Push-Notification Pipeline
               </div>
               <div className="text-xs text-slate-600 font-mono mb-1">
-                Go · Express.js · Firebase · AWS LightSail / Amplify / SES
+                Go · PGMQ · Firebase Cloud Messaging · PostgreSQL / pgx · Worker Pool
               </div>
               <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
-                <li>Split services between Go and Express.js by workload profile, deployed on cost-efficient LightSail instances with strict per-instance firewalls locking down inter-service traffic.</li>
-                <li>Integrated Firebase for real-time asset tracking and AWS SES for transactional email; frontend continuously deployed via Amplify.</li>
+                <li>High-throughput event worker service: Go worker pool continuously drains a PGMQ queue, evaluates per-machine alert thresholds, writes immutable alert logs, and dispatches push notifications via Firebase Cloud Messaging.</li>
+                <li>Queue re-architecture: migrated messaging from AWS SQS to PGMQ (Postgres-native), eliminating external cloud egress costs and latency; moved data layer to pgx connection pooling.</li>
+              </ul>
+            </div>
+
+            {/* Device Security & MQTT */}
+            <div className="mb-2.5">
+              <div className="font-bold text-slate-950">
+                4. Device Security & MQTT Backend
+              </div>
+              <div className="text-xs text-slate-600 font-mono mb-1">
+                Go · X.509 PKI · VerneMQ / EMQX · Protobuf · mutual TLS · Zot Registry
+              </div>
+              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
+                <li>Internal CA & PKI: built certificate service with internal CA, per-device X.509 issuance, certificate revocation list (CRL), and bulk certificate regeneration.</li>
+                <li>MQTT authentication & authorization hooks for VerneMQ and EMQX validating mutual TLS; high-efficiency Protobuf telemetry decoding; custom Go load-test tool.</li>
+                <li>Self-hosted Zot OCI container registry secured with mutual TLS: scripted CA, server and client certificates, and end-to-end verification script.</li>
+              </ul>
+            </div>
+
+            {/* VMBD Vision */}
+            <div className="mb-2.5">
+              <div className="font-bold text-slate-950">
+                5. VMBD Vision: Edge Test-Bench Controller
+              </div>
+              <div className="text-xs text-slate-600 font-mono mb-1">
+                Go · Raspberry Pi 5 · Modbus TCP · OpenCV (GoCV) · MQTT · SQLite · SSE
+              </div>
+              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
+                <li>Vision-based absorption-test system on Raspberry Pi 5: polls industrial PLC over Modbus TCP, captures camera frames, measures median stain width with OpenCV (GoCV), stores in SQLite, and serves live operator dashboard over Server-Sent Events (SSE).</li>
+                <li>Built Over-The-Air (OTA) update system: cryptographically signed releases, encrypted release hosting, scheduled backups with restore, update/revert workflows, and PIN-gated actions.</li>
+                <li>MQTT control channel: embedded broker, cryptographic signed-command verification, device client, and operator CLI.</li>
+              </ul>
+            </div>
+
+            {/* SahasForge */}
+            <div className="mb-2.5">
+              <div className="font-bold text-slate-950">
+                6. SahasForge: Computer-Vision Data & Training Pipeline
+              </div>
+              <div className="text-xs text-slate-600 font-mono mb-1">
+                Python · TypeScript / React · CVAT · ClearML · Nuclio · AWS Spot · PyTorch
+              </div>
+              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
+                <li>Extended self-hosted CVAT fork with temporal-labeling workspace and plugin, auto-annotation through Nuclio-served detectors, and ClearML dataset lineage linking annotation tasks to training data.</li>
+                <li>Unattended GPU training loop on AWS spot instances: launcher, golden AMI, IAM policy simulator verification, budget guard, and ClearML triggers. Instances boot, train, upload weights, and terminate autonomously. Full 48-epoch detector run cost ~$0.40.</li>
+                <li>Trained and evaluated D-FINE and Mask R-CNN models (crane, pit, ladle, charger-wagon detection), reaching ~0.75 validation AP on crane/pit tracking and serving back to CVAT for automated pre-labeling.</li>
+              </ul>
+            </div>
+
+            {/* AWS Cloud Dashboard */}
+            <div className="mb-2.5">
+              <div className="font-bold text-slate-950">
+                7. AWS Cloud Dashboard
+              </div>
+              <div className="text-xs text-slate-600 font-mono mb-1">
+                Go (Zero 3rd-party dependencies) · OpenTofu / Terraform · AWS · IAM Identity Center · Nomad
+              </div>
+              <ul className="list-disc list-inside text-xs text-slate-800 space-y-0.5">
+                <li>Single-binary web console with zero external Go dependencies driving OpenTofu to provision EC2, Lightsail, S3, Secrets Manager, RDS, and ALB/CloudFront with isolated state per project.</li>
+                <li>IAM Identity Center (AWS SSO) device-code login; Cost Explorer tag breakdowns, networking costs, and VPC flow-log analysis.</li>
+                <li>CloudWatch metrics, SSM Run Command, and Nomad job deployments; hardened by default (localhost binding, IMDSv2, KMS volume encryption, encrypted state backups).</li>
               </ul>
             </div>
           </div>

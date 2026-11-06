@@ -1,7 +1,7 @@
 # Akshay Mohan M P — Production Portfolio & Systems Lab
 
-> **Backend Engineer — Go · Cloud Infrastructure · IoT Platforms**  
-> Kannur, Kerala, India | Open to relocation & remote  
+> **Backend Engineer (Go) · IoT Platforms · AWS & DevOps**  
+> Kolhapur, Maharashtra, India | Open to relocation & remote  
 > 📧 [akshaymohanmp@gmail.com](mailto:akshaymohanmp@gmail.com) | 📞 +91 85890 06333  
 > 🔗 [LinkedIn](https://linkedin.com/in/akshay-mohan-m-p) | 💻 [GitHub](https://github.com/AkshayMohanMp)
 
@@ -9,7 +9,7 @@
 
 ## 🚀 Overview
 
-A high-performance, bespoke warm-beige editorial portfolio and systems engineering showcase for **Akshay Mohan M P**. Built with modern React 19, Tailwind CSS v4, Lucide icons, and designed to highlight real-world engineering accomplishments in high-throughput Go services, AWS cloud infrastructure, Linux kernel tuning, and industrial IoT platforms.
+A high-performance, bespoke warm-beige editorial portfolio and systems engineering showcase for **Akshay Mohan M P**. Built with modern React, Tailwind CSS v4, Lucide icons, and designed to highlight real-world engineering accomplishments in high-throughput Go services, AWS cloud infrastructure, zero-trust device PKI, edge systems (Raspberry Pi 5), and autonomous ML pipelines.
 
 ### ✨ Key Features
 
@@ -18,22 +18,27 @@ A high-performance, bespoke warm-beige editorial portfolio and systems engineeri
    - Real-time comparison of **Legacy Express.js** vs **Optimized Go Backend** showing Throughput (req/s), p95 Latency (ms), and Error Rate.
    - Live inspection tabs for the tuning recipe (`pgxpool.Config`, Linux kernel `net.core.somaxconn = 4096`, bcrypt cost 10) and full audit table.
 
-2. **Featured Systems & Architecture Showcase**:
-   - **Samyojak**: Multi-tenant IoT Operations Platform (Go, PostgreSQL, Zitadel, AWS IoT Core, VPC isolation).
-   - **VMBD**: Automated Methylene-Blue Clay Determination Rig (Go, Raspberry Pi Camera, PLC integration, MinIO/S3 frame tracing).
-   - **Secure OTA Update System**: Vision-inspection machine signed release daemon with automatic rollback and PLC race condition resolution.
-   - **AI-Assisted Annotation**: SAM 2.1 & YOLO models integrated into self-hosted CVAT.
-   - **Internal Cloud Admin Console**: In-house AWS tenant and device provisioning tool replacing manual console operations.
-   - **Vepl Cloud & Lamae**: Serverless Go on AWS Lambda & hybrid microservices platform.
+2. **Featured Systems & Architecture Showcase (Deep Technical Details)**:
+   - **Samyojak**: Multi-tenant IoT Operations Platform (Go, Gin, pgx, OpenFGA relationship-based RBAC, 85 OpenAPI paths, OTel OTLP).
+   - **Vepl Cloud**: Laboratory & Test-Management Platform (Go, Odoo ERP integration, native Go PDF report generation, fail-fast boot sequence, Coolify).
+   - **Alert & Push-Notification Pipeline**: Event-driven worker pool (Go, PGMQ Postgres-native queuing, Firebase Cloud Messaging).
+   - **Device Security & MQTT Backend**: Fleet cryptographic identity (X.509 PKI, internal CA, CRL revocation, VerneMQ & EMQX mTLS auth hooks, Protobuf).
+   - **VMBD Vision**: Edge Test-Bench Controller (Go on Raspberry Pi 5, Modbus TCP PLC closed-loop dosing, OpenCV GoCV, Server-Sent Events, signed OTA update daemon).
+   - **SahasForge**: Computer-Vision Data & Training Pipeline (Custom CVAT plugins, ClearML lineage, unattended $0.40 AWS GPU spot training loop, D-FINE & Mask R-CNN).
+   - **AWS Cloud Dashboard**: Zero-dependency Go browser console driving OpenTofu for infrastructure provisioning, AWS SSO device login, and Cost Explorer analytics.
 
-3. **Interactive Live Terminal (`aky-cli`)**:
+3. **Skills at a Glance & Interactive Matrix**:
+   - Comprehensive matrix covering Backend (Go), Data & Messaging, Cloud & Infrastructure, Security & PKI, Observability & Testing, Edge & Embedded, AI & Vision, and CI/CD.
+   - Dual view modes: Category Matrix with "Used in:" project tags, and tabular "Skills at a Glance" view.
+
+4. **Interactive Live Terminal (`aky-cli`)**:
    - Realistic terminal interface supporting commands (`help`, `whoami`, `benchmark`, `skills`, `projects`, `experience`, `contact`, `cv`, `neofetch`, `curl /healthz`).
    - Quick-action buttons for seamless mobile/click navigation.
 
-4. **1-Click Printable / Exportable Resume Viewer**:
+5. **1-Click Printable / Exportable Resume Viewer**:
    - Clean, verified resume modal formatted with print-to-PDF `@media print` stylesheets.
 
-5. **Direct Contact Hub**:
+6. **Direct Contact Hub**:
    - 1-click email copy, WhatsApp/phone link, social buttons, and contact form.
 
 ---

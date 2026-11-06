@@ -85,12 +85,12 @@ export default function Projects() {
                 <h3 className="text-lg font-bold text-[#24211D] group-hover:text-[#C25E38] transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-xs text-[#6E655B] mt-2 leading-relaxed">
+                <p className="text-xs text-[#6E655B] mt-1.5 leading-relaxed">
                   {project.tagline}
                 </p>
 
                 {/* Stack Pills */}
-                <div className="flex flex-wrap gap-1.5 my-4">
+                <div className="flex flex-wrap gap-1.5 my-3.5">
                   {project.stack.slice(0, 4).map((tech, idx) => (
                     <span 
                       key={idx}
@@ -104,6 +104,32 @@ export default function Projects() {
                       +{project.stack.length - 4}
                     </span>
                   )}
+                </div>
+
+                {/* Key Architectural Details Preview */}
+                <div className="space-y-2 my-3.5 pt-2 border-t border-[#F2ECE1]">
+                  {project.highlights.slice(0, 2).map((h, hIdx) => {
+                    const colonIdx = h.indexOf(': ');
+                    const hasPrefix = colonIdx !== -1 && colonIdx < 35;
+                    const prefix = hasPrefix ? h.slice(0, colonIdx) : null;
+                    const rest = hasPrefix ? h.slice(colonIdx + 2) : h;
+
+                    return (
+                      <div key={hIdx} className="text-xs text-[#524B43] flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] shrink-0 mt-1.5" />
+                        <span className="leading-snug line-clamp-2">
+                          {prefix ? (
+                            <>
+                              <strong className="text-[#24211D] font-semibold">{prefix}: </strong>
+                              <span>{rest}</span>
+                            </>
+                          ) : (
+                            rest
+                          )}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Impact summary quote */}
@@ -168,14 +194,30 @@ export default function Projects() {
 
             {/* Technical Highlights */}
             <div className="mb-6">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-[#7A7165] mb-3 font-semibold">KEY ENGINEERING ACHIEVEMENTS</h4>
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[#7A7165] mb-3 font-semibold">DEEP TECHNICAL & ARCHITECTURAL HIGHLIGHTS</h4>
               <ul className="space-y-3">
-                {activeProjectModal.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-[#3E372F] leading-relaxed">
-                    <CheckCircle className="w-4 h-4 text-[#2E7D32] shrink-0 mt-0.5" />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
+                {activeProjectModal.highlights.map((highlight, idx) => {
+                  const colonIdx = highlight.indexOf(': ');
+                  const hasPrefix = colonIdx !== -1 && colonIdx < 35;
+                  const prefix = hasPrefix ? highlight.slice(0, colonIdx) : null;
+                  const rest = hasPrefix ? highlight.slice(colonIdx + 2) : highlight;
+
+                  return (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#3E372F] leading-relaxed">
+                      <CheckCircle className="w-4 h-4 text-[#2E7D32] shrink-0 mt-0.5" />
+                      <span>
+                        {prefix ? (
+                          <>
+                            <strong className="text-[#24211D] font-bold">{prefix}: </strong>
+                            <span>{rest}</span>
+                          </>
+                        ) : (
+                          highlight
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
