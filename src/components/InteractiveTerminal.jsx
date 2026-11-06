@@ -139,16 +139,16 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-4xl h-[85vh] flex flex-col rounded-2xl bg-[#1D1B18] border border-[#3E3831] shadow-2xl overflow-hidden font-mono text-xs">
+      <div className="relative w-full max-w-4xl h-[85vh] flex flex-col rounded-2xl bg-[#0B192C] border border-[#1B3558] shadow-2xl overflow-hidden font-mono text-xs">
         
         {/* Terminal Header */}
-        <div className="px-4 py-3 bg-[#26221D] border-b border-[#3E3831] flex items-center justify-between select-none">
+        <div className="px-4 py-3 bg-[#0F223D] border-b border-[#1B3558] flex items-center justify-between select-none">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-[#E06C75] cursor-pointer" onClick={onClose}></span>
             <span className="w-3 h-3 rounded-full bg-[#E5C07B]"></span>
             <span className="w-3 h-3 rounded-full bg-[#98C379]"></span>
-            <span className="ml-2 text-[#E2DACB] font-semibold flex items-center gap-1.5">
-              <TerminalIcon className="w-3.5 h-3.5 text-[#E59866]" />
+            <span className="ml-2 text-[#E9F1FA] font-semibold flex items-center gap-1.5">
+              <TerminalIcon className="w-3.5 h-3.5 text-[#00ABE4]" />
               <span>akshay@sahas-infra: ~ (aky-cli)</span>
             </span>
           </div>
@@ -156,14 +156,14 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setHistory([])}
-              className="p-1 rounded text-[#9E9283] hover:text-[#FAF7F2] hover:bg-[#38332C]"
+              className="p-1 rounded text-[#BED6EE] hover:text-white hover:bg-[#162D4A] transition-colors"
               title="Clear Terminal"
             >
               <Trash2 className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={onClose}
-              className="p-1 rounded text-[#9E9283] hover:text-[#FAF7F2] hover:bg-[#38332C]"
+              className="p-1 rounded text-[#BED6EE] hover:text-white hover:bg-[#162D4A] transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
@@ -173,21 +173,21 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
         {/* Terminal Body */}
         <div 
           onClick={() => inputRef.current?.focus()}
-          className="flex-1 p-4 sm:p-6 overflow-y-auto space-y-2 text-[#EAE2D5] font-mono bg-[#181614]"
+          className="flex-1 p-4 sm:p-6 overflow-y-auto space-y-2 text-[#E9F1FA] font-mono bg-[#071322]"
         >
           {history.map((item, idx) => (
             <div key={idx} className="leading-relaxed">
               {item.type === 'system' && (
-                <div className="text-[#8A7F70] font-semibold">{item.text}</div>
+                <div className="text-[#627D98] font-semibold">{item.text}</div>
               )}
               {item.type === 'prompt' && (
-                <div className="flex items-center gap-2 text-[#E59866] mt-2">
-                  <span className="text-[#86EFAC]">akshay@sahas-infra:~$</span>
+                <div className="flex items-center gap-2 text-[#00ABE4] mt-2">
+                  <span className="text-[#38BDF8]">akshay@sahas-infra:~$</span>
                   <span className="text-white font-bold">{item.cmd}</span>
                 </div>
               )}
               {item.type === 'output' && (
-                <div className="text-[#D8CFBF] pl-2 whitespace-pre-wrap">{item.text}</div>
+                <div className="text-[#DCE7F5] pl-2 whitespace-pre-wrap">{item.text}</div>
               )}
               {item.type === 'error' && (
                 <div className="text-[#FCA5A5] pl-2 font-medium">{item.text}</div>
@@ -196,15 +196,15 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
           ))}
 
           {/* Active Command Line Input */}
-          <div className="flex items-center gap-2 pt-1 text-[#E59866]">
-            <span className="text-[#86EFAC] shrink-0">akshay@sahas-infra:~$</span>
+          <div className="flex items-center gap-2 pt-1 text-[#00ABE4]">
+            <span className="text-[#38BDF8] shrink-0">akshay@sahas-infra:~$</span>
             <input
               ref={inputRef}
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="flex-1 bg-transparent border-none outline-none text-[#FAF7F2] font-mono caret-[#E59866]"
+              className="flex-1 bg-transparent border-none outline-none text-[#FFFFFF] font-mono caret-[#00ABE4]"
               autoFocus
               spellCheck={false}
             />
@@ -213,13 +213,13 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
         </div>
 
         {/* Terminal Quick-Chips Footer */}
-        <div className="p-3 bg-[#26221D] border-t border-[#3E3831] flex flex-wrap items-center gap-2 text-[11px]">
-          <span className="text-[#968A7A] mr-1 hidden sm:inline">QUICK COMMANDS:</span>
+        <div className="p-3 bg-[#0F223D] border-t border-[#1B3558] flex flex-wrap items-center gap-2 text-[11px]">
+          <span className="text-[#627D98] mr-1 hidden sm:inline">QUICK COMMANDS:</span>
           {['help', 'whoami', 'benchmark', 'skills', 'projects', 'experience', 'contact', 'cv', 'neofetch', 'curl /healthz'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => handleRunCommand(cmd)}
-              className="px-2.5 py-1 rounded bg-[#352F28] hover:bg-[#C25E38] hover:text-white text-[#DDD3C3] font-mono transition-colors border border-[#484035]"
+              className="px-2.5 py-1 rounded bg-[#162D4A] hover:bg-[#00ABE4] hover:text-white text-[#DCE7F5] font-mono transition-colors border border-[#1E426F]"
             >
               {cmd}
             </button>

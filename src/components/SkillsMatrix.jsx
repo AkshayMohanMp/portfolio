@@ -50,32 +50,32 @@ export default function SkillsMatrix() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[#FAF7F2] relative border-t border-[#E7DFD3]">
+    <section id="skills" className="py-20 bg-white relative border-t border-[#D4E4F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#EDE4D6] border border-[#DFCFC0] text-[#7C5A37] font-mono text-xs mb-3 font-semibold">
-              <Cpu className="w-3.5 h-3.5 text-[#B45309]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E9F1FA] border border-[#D4E4F4] text-[#0084B4] font-mono text-xs mb-3 font-semibold shadow-xs">
+              <Cpu className="w-3.5 h-3.5 text-[#00ABE4]" />
               <span>SYSTEMS COMPETENCY</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#24211D] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F223D] tracking-tight">
               Technical Stack & Engineering Disciplines
             </h2>
-            <p className="mt-2 text-[#686055] max-w-2xl text-sm sm:text-base">
+            <p className="mt-2 text-[#486581] max-w-2xl text-sm sm:text-base">
               Production systems engineered around high-performance Go programming, IoT protocols, zero-trust device PKI, and autonomous cloud infrastructure.
             </p>
           </div>
 
           {/* View Mode Toggle */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#EBE3D5] border border-[#DFD6C7] self-start md:self-auto font-mono text-xs">
+          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#E9F1FA] border border-[#D4E4F4] self-start md:self-auto font-mono text-xs shadow-xs">
             <button
               onClick={() => setViewMode('grid')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
                 viewMode === 'grid'
-                  ? 'bg-[#C25E38] text-white font-bold shadow-sm'
-                  : 'text-[#686056] hover:text-[#24211D]'
+                  ? 'bg-[#00ABE4] text-white font-bold shadow-sm'
+                  : 'text-[#486581] hover:text-[#0F223D]'
               }`}
             >
               <LayoutGrid className="w-3.5 h-3.5" />
@@ -85,8 +85,8 @@ export default function SkillsMatrix() {
               onClick={() => setViewMode('table')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
                 viewMode === 'table'
-                  ? 'bg-[#C25E38] text-white font-bold shadow-sm'
-                  : 'text-[#686056] hover:text-[#24211D]'
+                  ? 'bg-[#00ABE4] text-white font-bold shadow-sm'
+                  : 'text-[#486581] hover:text-[#0F223D]'
               }`}
             >
               <Table className="w-3.5 h-3.5" />
@@ -109,11 +109,11 @@ export default function SkillsMatrix() {
                     onClick={() => setActiveCategory(cat.id)}
                     className={`flex items-center gap-2 px-3.5 py-2 rounded-xl font-mono text-xs transition-all ${
                       isActive
-                        ? 'bg-[#C25E38] text-white font-bold shadow-sm'
-                        : 'bg-white border border-[#E7DFD3] text-[#5A5146] hover:text-[#24211D] hover:bg-[#FAF7F2]'
+                        ? 'bg-[#00ABE4] text-white font-bold shadow-sm'
+                        : 'bg-white border border-[#D4E4F4] text-[#486581] hover:text-[#00ABE4] hover:bg-[#E9F1FA]'
                     }`}
                   >
-                    <CatIcon className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-[#C25E38]'}`} />
+                    <CatIcon className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-[#00ABE4]'}`} />
                     <span>{cat.name}</span>
                   </button>
                 );
@@ -127,34 +127,34 @@ export default function SkillsMatrix() {
                   key={idx}
                   className={`flex flex-col justify-between p-5 rounded-2xl border transition-all duration-300 ${
                     skill.highlight
-                      ? 'bg-white border-2 border-[#D8CCBD] shadow-md shadow-stone-900/04'
-                      : 'bg-white/80 border border-[#E7DFD3] hover:border-[#D5C9B8]'
+                      ? 'bg-[#F4F9FD] border-2 border-[#00ABE4] shadow-md shadow-[#00ABE4]/08'
+                      : 'bg-white border border-[#D4E4F4] hover:border-[#00ABE4] shadow-xs'
                   }`}
                 >
                   <div>
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-bold text-[#24211D] text-sm">
+                      <h4 className="font-bold text-[#0F223D] text-sm">
                         {skill.name}
                       </h4>
                       {skill.highlight && (
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#FDF0EB] text-[#A24322] border border-[#F7D3C5] font-semibold">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#E9F1FA] text-[#0084B4] border border-[#00ABE4]/30 font-semibold">
                           CORE
                         </span>
                       )}
                     </div>
                     
-                    <div className="text-[11px] font-mono text-[#C25E38] mb-2 font-semibold">
+                    <div className="text-[11px] font-mono text-[#0084B4] mb-2 font-semibold">
                       Level: {skill.level}
                     </div>
 
-                    <p className="text-xs text-[#6B6257] leading-relaxed font-sans mb-3">
+                    <p className="text-xs text-[#486581] leading-relaxed font-sans mb-3">
                       {skill.note}
                     </p>
                   </div>
 
                   {skill.whereUsed && (
-                    <div className="pt-2 border-t border-[#F2ECE1] text-[10px] font-mono text-[#786F63]">
-                      <span className="font-semibold text-[#8C3A18]">Used in: </span>
+                    <div className="pt-2 border-t border-[#E9F1FA] text-[10px] font-mono text-[#627D98]">
+                      <span className="font-semibold text-[#0084B4]">Used in: </span>
                       <span>{skill.whereUsed}</span>
                     </div>
                   )}
@@ -164,27 +164,27 @@ export default function SkillsMatrix() {
           </div>
         ) : (
           /* "Skills at a glance" Table View */
-          <div className="rounded-2xl bg-white border border-[#E7DFD3] overflow-hidden shadow-sm">
-            <div className="p-4 border-b border-[#EFEAE2] flex justify-between items-center bg-[#FAF7F2] font-mono text-xs">
-              <span className="text-[#24211D] font-bold">Skills at a Glance: What I Use & Where I Used It</span>
-              <span className="text-[#786F63]">Engineering Profile Reference</span>
+          <div className="rounded-2xl bg-white border border-[#D4E4F4] overflow-hidden shadow-sm">
+            <div className="p-4 border-b border-[#D4E4F4] flex justify-between items-center bg-[#E9F1FA] font-mono text-xs">
+              <span className="text-[#0F223D] font-bold">Skills at a Glance: What I Use & Where I Used It</span>
+              <span className="text-[#627D98]">Engineering Profile Reference</span>
             </div>
             
             <div className="overflow-x-auto">
               <table className="w-full text-left font-sans text-xs">
-                <thead className="bg-[#FAF7F2] text-[#696156] font-mono border-b border-[#EAE3D7]">
+                <thead className="bg-[#F4F9FD] text-[#486581] font-mono border-b border-[#D4E4F4]">
                   <tr>
                     <th className="p-3.5 w-1/4">Area</th>
                     <th className="p-3.5 w-1/2">What I use</th>
                     <th className="p-3.5 w-1/4">Where I used it</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#F0E8DC] text-[#3E3831]">
+                <tbody className="divide-y divide-[#E9F1FA] text-[#334E68]">
                   {skillsOverviewTable.map((row, idx) => (
-                    <tr key={idx} className="hover:bg-[#FAF6EE] transition-colors">
-                      <td className="p-3.5 font-bold text-[#24211D] font-mono">{row.area}</td>
-                      <td className="p-3.5 text-[#4E463E] font-medium leading-relaxed">{row.whatIUse}</td>
-                      <td className="p-3.5 text-[#8C3A18] font-mono text-[11px] leading-relaxed">{row.whereUsed}</td>
+                    <tr key={idx} className="hover:bg-[#E9F1FA]/50 transition-colors">
+                      <td className="p-3.5 font-bold text-[#0F223D] font-mono">{row.area}</td>
+                      <td className="p-3.5 text-[#334E68] font-medium leading-relaxed">{row.whatIUse}</td>
+                      <td className="p-3.5 text-[#0084B4] font-mono text-[11px] leading-relaxed">{row.whereUsed}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -197,16 +197,16 @@ export default function SkillsMatrix() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Spoken Languages */}
-          <div className="lg:col-span-5 p-6 rounded-2xl bg-white border border-[#E7DFD3] shadow-sm">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#7A7165] uppercase tracking-wider mb-4 font-semibold">
-              <Languages className="w-4 h-4 text-[#C25E38]" />
+          <div className="lg:col-span-5 p-6 rounded-2xl bg-[#F4F9FD] border border-[#D4E4F4] shadow-xs">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#627D98] uppercase tracking-wider mb-4 font-semibold">
+              <Languages className="w-4 h-4 text-[#00ABE4]" />
               <span>SPOKEN LANGUAGES</span>
             </div>
             <div className="space-y-3">
               {skillsData.languages.map((lang, idx) => (
                 <div key={idx} className="flex justify-between items-center text-xs">
-                  <span className="font-bold text-[#24211D]">{lang.name}</span>
-                  <span className="font-mono text-[#5A5146] bg-[#FAF7F2] px-2 py-1 rounded border border-[#EBE3D7]">
+                  <span className="font-bold text-[#0F223D]">{lang.name}</span>
+                  <span className="font-mono text-[#0084B4] bg-[#E9F1FA] px-2 py-1 rounded border border-[#D4E4F4]">
                     {lang.fluency}
                   </span>
                 </div>
@@ -215,15 +215,15 @@ export default function SkillsMatrix() {
           </div>
 
           {/* Core Philosophy Callout */}
-          <div className="lg:col-span-7 p-6 rounded-2xl bg-[#F5EDE1] border border-[#DFCFC0]">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#7A3617] uppercase tracking-wider mb-2 font-semibold">
-              <Zap className="w-4 h-4 text-[#C25E38]" />
+          <div className="lg:col-span-7 p-6 rounded-2xl bg-[#E9F1FA] border border-[#BED6EE] shadow-xs">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#0084B4] uppercase tracking-wider mb-2 font-semibold">
+              <Zap className="w-4 h-4 text-[#00ABE4]" />
               <span>ENGINEERING PHILOSOPHY</span>
             </div>
-            <h4 className="text-base font-bold text-[#24211D] mb-2">
+            <h4 className="text-base font-bold text-[#0F223D] mb-2">
               Careful, Verifiable Systems Born from Biomedical Discipline
             </h4>
-            <p className="text-xs sm:text-sm text-[#4E463E] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#334E68] leading-relaxed">
               Having spent two years maintaining and safety-testing hospital equipment before transitioning to software, I approach distributed systems with the same zero-tolerance for hidden failure modes. From strict OpenFGA relationship authorization to mTLS device fleets and pgx connection pooling, every layer is engineered to be deterministic, observable, and resilient under production stress.
             </p>
           </div>

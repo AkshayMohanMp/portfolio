@@ -13,13 +13,13 @@ export default function ResumeModal({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       
       {/* Outer container */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] flex flex-col rounded-2xl bg-[#FAF7F2] border border-[#D5C8B7] shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-4xl max-h-[92vh] flex flex-col rounded-2xl bg-white border border-[#D4E4F4] shadow-2xl overflow-hidden">
         
         {/* Top Control Bar (Hidden when printing) */}
-        <div className="p-4 bg-[#EFE8DC] border-b border-[#DFD4C3] flex items-center justify-between print:hidden">
+        <div className="p-4 bg-[#E9F1FA] border-b border-[#D4E4F4] flex items-center justify-between print:hidden">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold text-[#24211D] font-mono">Akshay_Mohan_M_P_Resume.pdf</span>
-            <span className="text-xs px-2 py-0.5 rounded bg-[#EDF5EE] text-[#1B5E20] border border-[#CDE3D2] font-mono font-semibold">
+            <span className="text-sm font-bold text-[#0F223D] font-mono">Akshay_Mohan_M_P_Resume.pdf</span>
+            <span className="text-xs px-2 py-0.5 rounded bg-white text-[#0084B4] border border-[#00ABE4]/30 font-mono font-semibold shadow-xs">
               Verified Copy
             </span>
           </div>
@@ -27,7 +27,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#C25E38] hover:bg-[#B0532E] text-white transition-all shadow-sm shadow-[#C25E38]/20"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#00ABE4] hover:bg-[#0096CA] text-white transition-all shadow-sm shadow-[#00ABE4]/20"
               title="Print or Save as PDF"
             >
               <Printer className="w-3.5 h-3.5" />
@@ -35,7 +35,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-[#E5DCCF] text-[#5C5449] hover:text-[#24211D] hover:bg-[#DBD1C2]"
+              className="p-1.5 rounded-lg bg-white text-[#486581] hover:text-[#0F223D] hover:bg-[#D4E4F4] transition-colors border border-[#D4E4F4]"
             >
               <X className="w-5 h-5" />
             </button>
@@ -50,7 +50,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h1 className="text-2xl font-bold tracking-tight text-slate-950">
               Akshay Mohan M P
             </h1>
-            <p className="text-sm font-semibold text-[#8C3A18] mt-0.5">
+            <p className="text-sm font-semibold text-[#0084B4] mt-0.5">
               Backend Engineer (Go) · IoT Platforms · AWS & DevOps
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 mt-2 font-mono">
@@ -62,7 +62,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               <span>•</span>
               <span>{personalInfo.email}</span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-4 text-xs text-blue-700 mt-1 font-mono">
+            <div className="flex flex-wrap items-center gap-x-4 text-xs text-[#0084B4] mt-1 font-mono">
               <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="hover:underline">
                 {personalInfo.linkedinHandle}
               </a>
