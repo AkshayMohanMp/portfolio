@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import BenchmarkSimulator from './components/BenchmarkSimulator';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import SkillsMatrix from './components/SkillsMatrix';
@@ -30,8 +29,6 @@ export default function App() {
           onOpenResume={() => setIsResumeOpen(true)}
           onOpenTerminal={() => setIsTerminalOpen(true)}
         />
-
-        <BenchmarkSimulator />
 
         <Experience />
 

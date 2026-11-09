@@ -87,7 +87,7 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
         { type: 'prompt', cmd: rawCmd },
         { type: 'output', text: 'HTTP/1.1 200 OK' },
         { type: 'output', text: 'Content-Type: application/json' },
-        { type: 'output', text: '{"status":"healthy","pgx_pool":{"min":20,"max":150,"in_use":14},"somaxconn":4096}' }
+        { type: 'output', text: '{"status":"healthy","services":"online","uptime":"99.98%","environment":"production"}' }
       ]);
       setInputVal('');
       return;
@@ -215,7 +215,7 @@ export default function InteractiveTerminal({ isOpen, onClose, onOpenResume }) {
         {/* Terminal Quick-Chips Footer */}
         <div className="p-3 bg-[#0F223D] border-t border-[#1B3558] flex flex-wrap items-center gap-2 text-[11px]">
           <span className="text-[#627D98] mr-1 hidden sm:inline">QUICK COMMANDS:</span>
-          {['help', 'whoami', 'benchmark', 'skills', 'projects', 'experience', 'contact', 'cv', 'neofetch', 'curl /healthz'].map((cmd) => (
+          {['help', 'whoami', 'skills', 'projects', 'experience', 'contact', 'cv', 'neofetch', 'curl /healthz'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => handleRunCommand(cmd)}

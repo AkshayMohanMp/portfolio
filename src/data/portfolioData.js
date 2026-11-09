@@ -14,9 +14,9 @@ export const personalInfo = {
   summary: `Backend engineer building production systems in Go for industrial IoT and laboratory platforms, and running the cloud infrastructure they live on. Led a complete Express.js-to-Go migration of a multi-tenant platform, and work across edge devices (Raspberry Pi 5), device security (PKI / mTLS / MQTT) and computer-vision data pipelines. Background in biomedical engineering maintaining hospital equipment brings a disciplined habit of building careful, verifiable systems.`,
   stats: [
     {
-      value: "+96.1%",
-      label: "Throughput Gain",
-      description: "Sustained increase under heavy concurrency after kernel & pgx tuning"
+      value: "99.98%",
+      label: "System Reliability",
+      description: "Production uptime across distributed Go services & cloud infrastructure"
     },
     {
       value: "85+",

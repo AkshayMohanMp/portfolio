@@ -85,7 +85,7 @@ export default function Footer({ onOpenTerminal, onOpenResume }) {
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00ABE4] animate-pulse"></span>
-            <span>Uptime: 99.98% | pgx pool: min 20 / max 150 | somaxconn: 4096</span>
+            <span>Uptime: 99.98% | Go 1.23 | AWS & Linux Systems</span>
           </div>
         </div>
 

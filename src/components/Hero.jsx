@@ -47,7 +47,7 @@ export default function Hero({ onOpenResume, onOpenTerminal }) {
                 Engineering <span className="text-[#00ABE4]">High-Throughput Go</span> Backends, IoT Platforms & Cloud Infrastructure.
               </h1>
               <p className="mt-4 text-base sm:text-lg text-[#486581] leading-relaxed font-normal">
-                I'm <strong className="text-[#0F223D] font-semibold">{personalInfo.name}</strong>, a Backend Engineer building production systems in <strong className="text-[#0F223D] font-semibold">Go</strong> for industrial IoT and laboratory platforms, and running the cloud infrastructure they live on. Led a complete Express.js-to-Go migration of a multi-tenant platform, tuned kernel and database pools to achieve a <strong className="text-[#00ABE4] font-semibold">+96.1% sustained capacity boost</strong> under heavy concurrency, and engineer across edge devices (Raspberry Pi 5), device security (PKI / mTLS / MQTT), and autonomous CV pipelines.
+                I'm <strong className="text-[#0F223D] font-semibold">{personalInfo.name}</strong>, a Backend Engineer building production systems in <strong className="text-[#0F223D] font-semibold">Go</strong> for industrial IoT and laboratory platforms, and running the cloud infrastructure they live on. Led a complete Express.js-to-Go migration of a multi-tenant platform, and engineer across edge devices (Raspberry Pi 5), device security (PKI / mTLS / MQTT), and autonomous CV pipelines.
               </p>
             </div>
 
@@ -70,19 +70,18 @@ export default function Hero({ onOpenResume, onOpenTerminal }) {
             {/* Call to Actions */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
-                href="#benchmark"
+                href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm bg-[#00ABE4] text-white hover:bg-[#0096CA] transition-all shadow-md shadow-[#00ABE4]/25 transform hover:-translate-y-0.5"
               >
-                <Activity className="w-4 h-4 text-white" />
-                <span>Benchmark Lab Simulator</span>
+                <span>View Architecture & Projects</span>
+                <ArrowUpRight className="w-4 h-4 text-white" />
               </a>
 
               <a
-                href="#projects"
+                href="#experience"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-white border border-[#D4E4F4] text-[#0F223D] hover:bg-[#F4F9FD] hover:border-[#00ABE4] transition-all shadow-xs"
               >
-                <span>View Architecture</span>
-                <ArrowUpRight className="w-4 h-4 text-[#486581]" />
+                <span>Career Experience</span>
               </a>
 
               <button
@@ -179,12 +178,12 @@ export default function Hero({ onOpenResume, onOpenTerminal }) {
                 {/* System Specs Footer inside card */}
                 <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] font-mono">
                   <div className="p-2 rounded-lg bg-[#E9F1FA] border border-[#D4E4F4]">
-                    <span className="text-[#486581] block text-[10px] font-semibold">POOL CONFIG</span>
-                    <span className="text-[#0F223D] font-bold">pgx min:20 max:150</span>
+                    <span className="text-[#486581] block text-[10px] font-semibold">CLOUD & INFRA</span>
+                    <span className="text-[#0F223D] font-bold">AWS + OpenTofu</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#E9F1FA] border border-[#D4E4F4]">
-                    <span className="text-[#486581] block text-[10px] font-semibold">KERNEL SYSCTL</span>
-                    <span className="text-[#0084B4] font-bold">somaxconn 4096</span>
+                    <span className="text-[#486581] block text-[10px] font-semibold">EDGE & IOT</span>
+                    <span className="text-[#0084B4] font-bold">Raspberry Pi + MQTT</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#E9F1FA] border border-[#D4E4F4]">
                     <span className="text-[#486581] block text-[10px] font-semibold">AUTH & SECURITY</span>

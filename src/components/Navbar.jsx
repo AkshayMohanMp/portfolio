@@ -22,7 +22,6 @@ export default function Navbar({ onOpenResume, onOpenTerminal }) {
 
   const navItems = [
     { label: 'Overview', href: '#overview' },
-    { label: 'Benchmark Lab', href: '#benchmark' },
     { label: 'Experience', href: '#experience' },
     { label: 'Systems & Projects', href: '#projects' },
     { label: 'Tech Stack', href: '#skills' },
